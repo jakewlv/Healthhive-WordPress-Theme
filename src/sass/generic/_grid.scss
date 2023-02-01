@@ -1,0 +1,24 @@
+$max-width: 120rem !default;
+$page-padding: minmax(6rem, 1fr);
+$full-width: full-start / full-end;
+$centered: center-start / center-end;
+
+.grid-centered {
+  grid-column: $centered;
+  display: grid;
+}
+
+.grid-full-width {
+  grid-column: $full-width;
+  display: grid;
+}
+
+.content-grid {
+  @media only screen and (min-width: 560px) {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start]
+      minmax(min-content, $max-width)
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}

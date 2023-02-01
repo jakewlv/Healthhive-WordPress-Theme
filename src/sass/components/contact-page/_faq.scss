@@ -1,0 +1,39 @@
+.faq {
+  background-color: #1c2023;
+  color: hsl(207.3, 11.6%, 70%);
+
+  &__list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    row-gap: 3rem;
+    text-align: center;
+
+    @media (min-width: 560px) {
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+      column-gap: 9rem;
+      text-align: unset;
+    }
+  }
+
+  &__item {
+    margin: 0;
+    margin-bottom: rem;
+    max-width: 85rem;
+  }
+
+  &__question {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    margin-bottom: 1.2rem;
+    color: $color__white;
+    margin: 0;
+    // padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__answer {
+    margin: 0;
+  }
+}

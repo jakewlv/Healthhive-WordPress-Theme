@@ -1,0 +1,80 @@
+.entry-content {
+  .rcp_error {
+    margin-bottom: 3rem;
+    border: none;
+    background-color: #e52323;
+    border-radius: 4px;
+    color: white;
+    padding: 1.2rem 1.5rem;
+    font-weight: 400;
+    a {
+      color: white;
+      font-weight: 700;
+    }
+
+    span {
+      padding: 0;
+    }
+  }
+
+  .rcp-table#rcp-account-overview,
+  .rcp-table#rcp-payment-history {
+    width: unset;
+    gap: 1.5rem;
+
+    @media (min-width: 782px) {
+      gap: 3rem;
+    }
+  }
+
+  .rcp-table {
+    * {
+      flex: 1;
+    }
+  }
+
+  .rcp-table#rcp-account-overview {
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-bottom: 5rem;
+  }
+
+  header {
+    .rcp-account-overview {
+      margin-bottom: 1rem;
+      span {
+        color: $color__text-heading;
+      }
+    }
+  }
+
+  .rcp-account-overview {
+    gap: 3rem;
+    & > span {
+      flex: 1;
+      width: unset;
+      max-width: unset;
+      min-width: unset;
+      display: flex;
+      flex-direction: column;
+      min-height: 75px;
+
+      @media (min-width: 782px) {
+        min-height: unset;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 400;
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+      span {
+        min-height: unset;
+        width: unset;
+        max-width: unset;
+        min-width: unset;
+      }
+    }
+  }
+}

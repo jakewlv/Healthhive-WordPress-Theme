@@ -1,0 +1,22 @@
+.photo-reel {
+  display: none;
+
+  @media (min-width: 1055px) {
+    display: unset;
+  }
+  &__inner {
+    display: grid;
+    gap: 1px;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+
+    @media only screen and (max-width: 635px) {
+      grid-template-columns: initial;
+    }
+  }
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}

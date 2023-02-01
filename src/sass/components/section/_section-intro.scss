@@ -1,0 +1,43 @@
+.section-intro {
+  text-align: center;
+  height: fit-content;
+
+  @media (min-width: 560px) {
+    // padding-top: 6rem;
+    // padding: 0;
+    // margin-bottom: 6rem;
+  }
+
+  &--left {
+    @media only screen and (min-width: 560px) {
+      text-align: unset;
+
+      .section-intro__description {
+        margin: unset;
+      }
+    }
+  }
+
+  &--light {
+    color: $color__white !important;
+  }
+
+  &__title {
+    position: relative;
+    color: inherit;
+    line-height: 1;
+    // margin-bottom: 3rem;
+
+    &--dark {
+      color: $color__text-heading;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: inherit;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}

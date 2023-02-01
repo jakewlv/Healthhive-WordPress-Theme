@@ -1,0 +1,20 @@
+.team-members {
+  &__inner {
+    display: grid;
+    gap: 3rem;
+  }
+  &__team-member {
+    display: grid;
+    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+    @media (min-width: 560px) {
+      grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+      gap: 6rem;
+    }
+
+    // @media (min-width: 980px) {
+    //   gap: 6rem;
+    // }
+  }
+}

@@ -1,0 +1,132 @@
+.services {
+  overflow-x: clip;
+}
+
+.service {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1px;
+  color: hsla(0, 0%, 63%, 1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  //&:nth-child(even) {
+  //  .service__button {
+  //    background-color: $color__brand;
+  //  }
+  //}
+
+  &:hover {
+    transform: scale(1.03);
+    z-index: 1;
+    box-shadow: (0px 0px 80px rgba(0, 0, 0, 1));
+    //transition: background-color 0.2s ease-in-out;
+
+    .service__button {
+      background-color: $color__brand;
+      color: white;
+
+      &:hover {
+        background-color: darken($color__brand, 10%);
+      }
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  &__text-container {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color__bgDark;
+  }
+
+  &__text-content {
+    justify-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12rem 0;
+    min-width: 45rem;
+  }
+
+  &__title {
+    font-size: 3.649rem;
+    line-height: 6.386rem;
+    text-transform: uppercase;
+    //line-height: 1;
+
+    &--light {
+      color: white;
+    }
+  }
+
+  &__price {
+    font-size: 2.883rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 20%, 1);
+    padding-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
+    line-height: 5.045rem;
+
+    &--light {
+      color: white;
+    }
+
+    &:before {
+      content: '£';
+    }
+
+    &:after {
+      margin-left: 1rem;
+      content: ' / per session';
+      color: hsla(0, 0%, 63%, 1);
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__excerpt {
+    font-size: 2.025rem;
+    line-height: 3.544rem;
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  &__benefit-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__benefit-item {
+    padding: 0.5rem 0;
+    display: flex;
+    gap: 1rem;
+
+    &:before {
+      content: '●';
+    }
+  }
+
+  &__button {
+    background-color: hsla(0, 0%, 21%, 1);
+    margin: 6rem 0;
+    justify-self: flex-start;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .entry-footer {
+    position: absolute;
+    padding: 6rem 0;
+    bottom: 6px;
+  }
+}

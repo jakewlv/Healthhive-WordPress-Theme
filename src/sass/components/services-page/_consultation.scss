@@ -1,0 +1,118 @@
+.consultation {
+  // &__inner {
+  //   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  //   gap: 6rem;
+
+  //   @media only screen and (max-width: 560px) {
+  //     grid-template-columns: initial;
+  //   }
+  // }
+
+  &__inner {
+    gap: 3rem;
+    @media (min-width: 560px) {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    }
+
+    @media only screen and (min-width: 880px) {
+      gap: 6rem;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 1rem;
+    max-width: 45rem;
+    justify-self: right;
+    margin-bottom: 1.5rem;
+
+    @media only screen and (max-width: 880px) {
+      padding: 0;
+      justify-self: center;
+    }
+  }
+
+  &__image {
+    @media (min-width: 560px) {
+      border-radius: 8px;
+    }
+  }
+
+  &__text {
+    @media only screen and (max-width: 880px) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+  }
+
+  &__description {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__feature-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 1.8rem;
+    @media only screen and (max-width: 879px) {
+      text-align: initial;
+    }
+  }
+
+  &__feature-lists {
+    display: flex;
+    column-gap: 9rem;
+    row-gap: 1.5rem;
+    margin-bottom: 6rem;
+    flex-wrap: wrap;
+  }
+
+  &__feature-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    text-align: left;
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+    svg {
+      min-width: 25px;
+    }
+  }
+
+  &__button-group {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+    @media only screen and (max-width: 880px) {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    display: block;
+  }
+
+  &__dl-app {
+    color: $color__text-main !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+}

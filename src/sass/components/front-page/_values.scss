@@ -1,0 +1,40 @@
+.values {
+  &__values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    justify-content: center;
+    // display: grid;
+    // gap: 6rem;
+    // justify-content: center;
+
+    // @media only screen and (min-width: 580px) {
+    //   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    // }
+  }
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 24rem;
+  justify-content: center;
+
+  &:hover &__icon {
+    stroke: $color__brand;
+  }
+
+  &__icon {
+    height: 13rem;
+    width: 13rem;
+    stroke-width: 0.3px;
+    stroke: #121416;
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  &__description {
+    margin: 0;
+  }
+}

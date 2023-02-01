@@ -1,0 +1,166 @@
+.challenges {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 0;
+  color: white;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: linear-gradient(
+      180deg,
+      hsl(0deg 74% 10%) 0%,
+      rgb(20 21 22) 100%
+    );
+    z-index: 1;
+  }
+
+  &__inner {
+    z-index: 2;
+    height: fit-content;
+  }
+
+  &__challenge {
+    background-color: hsl(20%, 10%, 11%);
+    background: hsl(0deg 0% 100% / 18%);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(15px);
+
+    @media (min-width: 560px) {
+      padding: 4rem 5rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 560px) {
+      justify-content: unset;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @media (min-width: 560px) {
+      font-size: 3.2rem;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    margin: 0 auto;
+    @media (min-width: 380px) {
+      margin: unset;
+    }
+
+    svg {
+      height: 10rem;
+      width: 10rem;
+      stroke-width: 0.4px;
+      stroke: $color__brand;
+      animation: heartbeat 1s infinite;
+    }
+  }
+
+  &__dates {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__date {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    svg {
+      margin-top: -3px;
+      stroke: #626262;
+    }
+  }
+
+  &__date-container {
+    & > span {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__excerpt {
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    margin-bottom: 3rem;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__goal {
+    color: inherit;
+    font-weight: 300;
+    margin-bottom: 6rem;
+    font-size: 2.5rem;
+
+    span {
+      font-weight: 700;
+      display: block;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    svg {
+      color: $color__brand;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.85);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
